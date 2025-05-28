@@ -28,22 +28,16 @@ foundry-fund-me/
 ├── foundry.toml
 └── README.md # Project documentation
 
-
 ## 🧪 How to Test
 
 To run the tests locally:
 
 ```bash
 forge test
-
-
-Make sure you have Foundry installed. If not, you can install it with:
-
-curl -L https://foundry.paradigm.xyz | bash
-foundryup
-
+```
 
 ## 🛠️ How to Deploy
+
 Set your environment variables:
 
 PRIVATE_KEY
@@ -55,6 +49,7 @@ Deploy with Forge script:
 forge script script/DeployFundMe.s.sol --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast
 
 ## 🔒 Security & Audit Notes
+
 This project is a practice ground for learning:
 
 Proper test coverage
@@ -64,9 +59,22 @@ Handling real ETH funding and withdrawal scenarios
 Using mocks for Chainlink integration in local testing
 
 ## 🙋‍♂️ Author
+
 Victor Mkpo
-GitHub
+
+[GitHub](https://github.com/vmkpo)
 
 ## 📜 License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Course link for this Project.
+
+
+[UPDRAFT.CYFRIN](https://updraft.cyfrin.io/courses/foundry/foundry-fund-me) 
+
+
+
+
+
 
