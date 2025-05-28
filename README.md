@@ -1,66 +1,72 @@
-## Foundry
+# Foundry Fund Me
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A smart contract project built using [Foundry](https://book.getfoundry.sh/) that demonstrates funding and withdrawal functionality. This project is part of my journey to becoming a smart contract auditor.
 
-Foundry consists of:
+## 🚀 Project Overview
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This project allows users to fund a contract and the contract owner to withdraw the funds. It integrates with Chainlink price feeds to enforce a minimum USD contribution threshold.
 
-## Documentation
+## 🧱 Built With
 
-https://book.getfoundry.sh/
+- [Solidity](https://soliditylang.org/)
+- [Foundry](https://book.getfoundry.sh/) (Forge & Cast)
+- [Chainlink](https://chain.link/)
+- [Hardhat (for reference)](https://hardhat.org/) *(if applicable)*
+- [GitHub](https://github.com/)
 
-## Usage
+## 📂 Directory Structure
 
-### Build
+foundry-fund-me/
+├── lib/ # External dependencies
+├── script/ # Deployment scripts
+├── src/ # Smart contracts
+│ └── FundMe.sol
+├── test/ # Foundry tests
+│ ├── FundMeTest.t.sol
+│ └── InteractionsTest.t.sol
+├── .gitignore
+├── foundry.toml
+└── README.md # Project documentation
 
-```shell
-$ forge build
-```
 
-### Test
+## 🧪 How to Test
 
-```shell
-$ forge test
-```
+To run the tests locally:
 
-### Format
+```bash
+forge test
 
-```shell
-$ forge fmt
-```
 
-### Gas Snapshots
+Make sure you have Foundry installed. If not, you can install it with:
 
-```shell
-$ forge snapshot
-```
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
 
-### Anvil
 
-```shell
-$ anvil
-```
+## 🛠️ How to Deploy
+Set your environment variables:
 
-### Deploy
+PRIVATE_KEY
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+RPC_URL
 
-### Cast
+Deploy with Forge script:
 
-```shell
-$ cast <subcommand>
-```
+forge script script/DeployFundMe.s.sol --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast
 
-### Help
+## 🔒 Security & Audit Notes
+This project is a practice ground for learning:
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Proper test coverage
+
+Handling real ETH funding and withdrawal scenarios
+
+Using mocks for Chainlink integration in local testing
+
+## 🙋‍♂️ Author
+Victor Mkpo
+GitHub
+
+## 📜 License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
